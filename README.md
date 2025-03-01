@@ -214,16 +214,16 @@ Link do Projeto: [https://github.com/Dec0XD/audio-transcription-microservices](h
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/Dec0XD//audio-transcription-microservices.svg?style=for-the-badge
-[contributors-url]: https://github.com/Dec0XD//audio-transcription-microservices/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Dec0XD//audio-transcription-microservices.svg?style=for-the-badge
-[forks-url]: https://github.com/Dec0XD//audio-transcription-microservices/network/members
-[stars-shield]: https://img.shields.io/github/stars/Dec0XD//audio-transcription-microservices.svg?style=for-the-badge
-[stars-url]: https://github.com/Dec0XD//audio-transcription-microservices/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Dec0XD//audio-transcription-microservices.svg?style=for-the-badge
-[issues-url]: https://github.com/Dec0XD//audio-transcription-microservices/issues
-[license-shield]: https://img.shields.io/github/license/Dec0XD//audio-transcription-microservices.svg?style=for-the-badge
-[license-url]: https://github.com/Dec0XD//audio-transcription-microservices/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Dec0XD/audio-transcription-microservices.svg?style=for-the-badge
+[contributors-url]: https://github.com/Dec0XD/audio-transcription-microservices/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dec0XD/audio-transcription-microservices.svg?style=for-the-badge
+[forks-url]: https://github.com/Dec0XD/audio-transcription-microservices/network/members
+[stars-shield]: https://img.shields.io/github/stars/Dec0XD/audio-transcription-microservices.svg?style=for-the-badge
+[stars-url]: https://github.com/Dec0XD/audio-transcription-microservices/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dec0XD/audio-transcription-microservices.svg?style=for-the-badge
+[issues-url]: https://github.com/Dec0XD/audio-transcription-microservices/issues
+[license-shield]: https://img.shields.io/github/license/Dec0XD/audio-transcription-microservices.svg?style=for-the-badge
+[license-url]: https://github.com/Dec0XD/audio-transcription-microservices/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/andré-coêlho-b55b0622a/
 
