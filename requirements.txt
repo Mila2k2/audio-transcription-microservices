@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+transformers
+torch
+librosa
+pyannote.audio
+streamlit
+requests
+pydub
+python-dotenv
+python-multipart
