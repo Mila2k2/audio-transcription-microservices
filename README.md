@@ -13,21 +13,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/your_username/audio-transcription-microservices">
+  <a href="https://github.com/Dec0XD/audio-transcription-microservices">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">Transcrição de Áudio/Vídeo com Segmentação de Falantes</h3>
   <p align="center">
     Uma aplicação de transcrição de áudio/vídeo com segmentação de falantes, usando uma arquitetura de microserviços com Streamlit, FastAPI, Whisper e Pyannote, otimizada para execução local com suporte a GPU.
     <br />
-    <a href="https://github.com/your_username/audio-transcription-microservices"><strong>Explore a documentação »</strong></a>
+    <a href="https://github.com/Dec0XD/audio-transcription-microservices"><strong>Explore a documentação »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/your_username/audio-transcription-microservices">Ver Demonstração</a>
+    <a href="https://github.com/Dec0XD/audio-transcription-microservices">Ver Demonstração</a>
     ·
-    <a href="https://github.com/your_username/audio-transcription-microservices/issues">Reportar Bug</a>
+    <a href="https://github.com/Dec0XD/audio-transcription-microservices/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/your_username/audio-transcription-microservices/issues">Solicitar Funcionalidade</a>
+    <a href="https://github.com/Dec0XD/audio-transcription-microservices/issues">Solicitar Funcionalidade</a>
   </p>
 </div>
 
