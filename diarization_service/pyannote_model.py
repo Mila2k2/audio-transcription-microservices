@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")
-print(f"Token carregado: {HF_TOKEN}")
 
 if not HF_TOKEN:
     raise ValueError("Token Hugging Face não fornecido. Defina a variável HF_TOKEN no arquivo .env.")
