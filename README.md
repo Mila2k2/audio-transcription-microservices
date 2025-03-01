@@ -1,133 +1,230 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+---
+
 <a name="readme-top"></a>
 
 <!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/your_username/audio-transcription-microservices">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  <h3 align="center">Transcrição de Áudio/Vídeo com Segmentação de Falantes</h3>
+  <p align="center">
+    Uma aplicação de transcrição de áudio/vídeo com segmentação de falantes, usando uma arquitetura de microserviços com Streamlit, FastAPI, Whisper e Pyannote, otimizada para execução local com suporte a GPU.
+    <br />
+    <a href="https://github.com/your_username/audio-transcription-microservices"><strong>Explore a documentação »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/your_username/audio-transcription-microservices">Ver Demonstração</a>
+    ·
+    <a href="https://github.com/your_username/audio-transcription-microservices/issues">Reportar Bug</a>
+    ·
+    <a href="https://github.com/your_username/audio-transcription-microservices/issues">Solicitar Funcionalidade</a>
+  </p>
+</div>
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Índice</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o Projeto</a>
+      <ul>
+        <li><a href="#construído-com">Construído Com</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#primeiros-passos">Primeiros Passos</a>
+      <ul>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#instalação">Instalação</a></li>
+      </ul>
+    </li>
+    <li><a href="#uso">Uso</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contribuição">Contribuição</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#contato">Contato</a></li>
+    <li><a href="#agradecimentos">Agradecimentos</a></li>
+  </ol>
+</details>
 
+<!-- ABOUT THE PROJECT -->
+## Sobre o Projeto
 
+Esta aplicação permite aos usuários fazer upload de arquivos de áudio ou vídeo, convertê-los para o formato .wav, transcrevê-los usando o modelo Whisper da OpenAI e, opcionalmente, segmentar os falantes com o Pyannote. Construída com uma arquitetura de microserviços, ela separa a lógica de transcrição e diarização em serviços distintos, utilizando FastAPI para os endpoints e Streamlit para uma interface de usuário intuitiva. O projeto é executado localmente em Python, com suporte otimizado para GPUs NVIDIA (ex.: RTX 3060), aproveitando CUDA para acelerar o processamento.
 
+### Por que este projeto?
+- Fornece uma solução modular para transcrição de áudio/vídeo com identificação de falantes.
+- Otimizado para desempenho com suporte a GPU, ideal para processamentos mais rápidos.
+- Interface simples e acessível via Streamlit, com verificação de disponibilidade dos modelos.
 
+Este projeto é perfeito para transcrição de entrevistas, reuniões ou podcasts, oferecendo flexibilidade e desempenho.
 
-<!-- PROJECT LOGO --> <br /> <div align="center"> <a href="https://github.com/your_username/repo_name"> <img src="images/logo.png" alt="Logo" width="80" height="80"> </a> <h3 align="center">Transcrição de Áudio/Vídeo com Segmentação de Falantes</h3> <p align="center"> Uma aplicação de transcrição de áudio/vídeo com segmentação de falantes, usando uma arquitetura de microserviços com Streamlit, FastAPI, Whisper, Pyannote e Docker. <br /> <a href="https://github.com/your_username/repo_name"><strong>Explore the docs »</strong></a> <br /> <br /> <a href="https://github.com/your_username/repo_name">View Demo</a> · <a href="https://github.com/your_username/repo_name/issues">Report Bug</a> · <a href="https://github.com/your_username/repo_name/issues">Request Feature</a> </p> </div> <!-- TABLE OF CONTENTS --> <details> <summary>Table of Contents</summary> <ol> <li> <a href="#about-the-project">About The Project</a> <ul> <li><a href="#built-with">Built With</a></li> </ul> </li> <li> <a href="#getting-started">Getting Started</a> <ul> <li><a href="#prerequisites">Prerequisites</a></li> <li><a href="#installation">Installation</a></li> </ul> </li> <li><a href="#usage">Usage</a></li> <li><a href="#roadmap">Roadmap</a></li> <li><a href="#contributing">Contributing</a></li> <li><a href="#license">License</a></li> <li><a href="#contact">Contact</a></li> <li><a href="#acknowledgments">Acknowledgments</a></li> </ol> </details> <!-- ABOUT THE PROJECT -->
-About The Project
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
+### Construído Com
+- **Python**: Linguagem principal do projeto.
+- **Streamlit**: Interface de usuário interativa.
+- **FastAPI**: Backend para serviços de transcrição e diarização.
+- **Whisper**: Modelo de transcrição de áudio da OpenAI.
+- **Pyannote**: Segmentação de falantes.
+- **PyTorch com CUDA**: Suporte a GPU para acelerar os modelos.
 
-Esta aplicação permite aos usuários fazer upload de arquivos de áudio ou vídeo, convertê-los para o formato .wav, transcrevê-los usando o modelo Whisper da OpenAI e, opcionalmente, segmentar os falantes usando o Pyannote. Construída com uma arquitetura de microserviços, ela separa a lógica de transcrição e diarização em serviços distintos, utilizando FastAPI para os endpoints e Streamlit para uma interface de usuário intuitiva. O Docker é usado para conteinerização, garantindo facilidade de deployment e escalabilidade.
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-Por que este projeto?
+<!-- GETTING STARTED -->
+## Primeiros Passos
 
-Fornece uma solução modular e escalável para transcrição de áudio/vídeo com segmentação de falantes.
-Facilita a integração de novas funcionalidades graças à arquitetura de microserviços.
-Oferece uma interface simples e acessível para usuários finais.
-Este projeto é ideal para quem busca uma ferramenta robusta para transcrição e análise de áudio/vídeo, com suporte a múltiplos falantes.
+Siga estas instruções para configurar o projeto localmente.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-Built With
-Aqui estão as principais tecnologias utilizadas no projeto:
+### Pré-requisitos
+- **Python 3.9+**: [Baixe aqui](https://www.python.org/downloads/).
+- **Conta no Hugging Face**: Crie uma conta e gere um token de API em [Hugging Face](https://huggingface.co/settings/tokens).
+- **FFmpeg**: Necessário para conversão de arquivos. Instale via [ffmpeg.org](https://ffmpeg.org/download.html) e adicione ao PATH.
+- **CUDA Toolkit 11.8** (opcional, para GPU): [Baixe aqui](https://developer.nvidia.com/cuda-11-8-0-download-archive) se usar uma GPU NVIDIA.
+- **cuDNN** (opcional, para GPU): [Baixe aqui](https://developer.nvidia.com/cudnn) e configure com CUDA 11.8.
+- **Driver NVIDIA**: Certifique-se de que o driver mais recente está instalado.
 
-- Interface de usuário interativa.
-- Backend para serviços de transcrição e diarização.
-- Modelo de transcrição de áudio da OpenAI.
-- Segmentação de falantes.
-- Conteinerização e deployment.
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- GETTING STARTED -->
-Getting Started
-Siga estas instruções para configurar o projeto localmente e começar a usá-lo.
+### Instalação
+1. **Clone o repositório**:
+   ```sh
+   git clone https://github.com/Dec0XD/audio-transcription-microservices.git
+   cd audio-transcription-microservices
+   ```
 
-Prerequisites
-Você precisará dos seguintes itens instalados:
+2. **Crie um ambiente virtual**:
+   ```sh
+   python -m venv .venv
+   .venv\Scripts\activate  # Windows
+   ```
 
-Docker: Necessário para construir e executar os containers. Baixe aqui.
-Conta no Hugging Face: Para acessar o modelo Pyannote, crie uma conta e gere um token de API em Hugging Face.
-Installation
-Clone o repositório
-sh
-Encapsular
-Copiar
-git clone https://github.com/your_username/repo_name.git
-Navegue até o diretório do projeto
-sh
-Encapsular
-Copiar
-cd repo_name
-Configure o token do Hugging Face
-Crie um arquivo .env na raiz do projeto.
-Adicione o seguinte conteúdo, substituindo seu_token_aqui pelo seu token da Hugging Face:
-text
-Encapsular
-Copiar
-HF_TOKEN=seu_token_aqui
-Construa e inicie os containers
-sh
-Encapsular
-Copiar
-docker-compose up --build
-Acesse a interface
-Abra seu navegador e vá para http://localhost:8501.
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- USAGE EXAMPLES -->
-Usage
-Para usar a aplicação:
+3. **Instale as dependências**:
+   ```sh
+   pip install -r requirements.txt
+   ```
+   - Para suporte a GPU (CUDA 11.8):
+     ```sh
+     pip uninstall torch
+     pip install torch --index-url https://download.pytorch.org/whl/cu118
+     ```
 
-Faça upload de um arquivo de áudio (.mp3, .wav) ou vídeo (.mp4) diretamente na interface Streamlit.
-Marque a opção "Incluir segmentação de falantes" se desejar identificar quem fala e quando.
-Visualize a transcrição resultante na tela.
-Exemplo de saída com segmentação de falantes:
+4. **Configure o token do Hugging Face**:
+   - Crie um arquivo `.env` na raiz do projeto:
+     ```text
+     HF_TOKEN=seu_token_aqui
+     ```
 
-text
-Encapsular
-Copiar
-Speaker 1 (0.0s - 5.0s): Olá, como você está?
-Speaker 2 (5.0s - 10.0s): Estou bem, obrigado!
+5. **Inicie os serviços**:
+   - Terminal 1: `python transcription_service/whisper_model.py`
+   - Terminal 2: `python diarization_service/pyannote_model.py`
+   - Terminal 3: `streamlit run frontend/app.py`
+
+6. **Acesse a interface**:
+   - Abra o navegador em `http://localhost:8501`.
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## Uso
+
+1. **Verifique os modelos**:
+   - Na interface, veja o status dos modelos Whisper e Pyannote (ex.: "Disponível - openai/whisper-medium (cuda:0)").
+
+2. **Faça upload**:
+   - Carregue um arquivo de áudio (.mp3, .wav) ou vídeo (.mp4).
+
+3. **Opções**:
+   - Marque "Incluir segmentação de falantes" para identificar quem fala e quando.
+
+4. **Resultado**:
+   - Exemplo com segmentação:
+     ```
+     Número de falantes detectados: 4
+     Transcrições por segmento:
+     Speaker SPEAKER_01 (4.2s - 5.0s): O João pensou no botão, foi?
+     Speaker SPEAKER_00 (6.1s - 9.2s): Sim, ele pensou sim.
+     ```
+
 Para mais detalhes, consulte a documentação do projeto.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- ROADMAP -->
-Roadmap
- Implementar transcrição com Whisper.
- Adicionar segmentação de falantes com Pyannote.
- Suporte a mais formatos de arquivo (.ogg, .flac).
- Opção para baixar a transcrição em um arquivo de texto.
- Melhorias na interface, como suporte a múltiplos idiomas.
-Veja as issues abertas para uma lista completa de funcionalidades propostas e problemas conhecidos.
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- CONTRIBUTING -->
-Contributing
-Contribuições são o que tornam a comunidade open source um lugar incrível para aprender, inspirar e criar. Qualquer contribuição é muito bem-vinda.
+<!-- ROADMAP -->
+## Roadmap
+- [x] Implementar transcrição com Whisper.
+- [x] Adicionar segmentação de falantes com Pyannote.
+- [x] Suporte a GPU.
+- [ ] Suporte a mais formatos de arquivo (.ogg, .flac).
+- [ ] Exportar transcrições como arquivo de texto.
+- [ ] Suporte a múltiplos idiomas no Whisper.
 
-Se você tem uma sugestão para melhorar o projeto:
+Veja as [issues abertas](https://github.com/Dec0XD/audio-transcription-microservices/issues) para mais funcionalidades propostas.
 
-Faça um fork do repositório.
-Crie um branch para sua feature (git checkout -b feature/SuporteAudioOgg).
-Commit suas alterações (git commit -m 'Adiciona suporte a arquivos .ogg').
-Push para o branch (git push origin feature/SuporteAudioOgg).
-Abra um Pull Request.
-Não se esqueça de dar uma estrela ao projeto! Obrigado!
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- LICENSE -->
-License
-Distribuído sob a licença MIT. Veja LICENSE.txt para mais informações.
+<!-- CONTRIBUTING -->
+## Contribuição
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- CONTACT -->
-Contact
-Nome do Desenvolvedor - @your_twitter - email@example.com
+Contribuições são bem-vindas! Para sugerir melhorias:
+1. Faça um fork do repositório.
+2. Crie um branch (`git checkout -b feature/NovaFuncionalidade`).
+3. Commit suas mudanças (`git commit -m 'Adiciona NovaFuncionalidade'`).
+4. Push para o branch (`git push origin feature/NovaFuncionalidade`).
+5. Abra um Pull Request.
 
-Link do Projeto: https://github.com/your_username/repo_name
+Dê uma estrela ao projeto se gostar!
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- ACKNOWLEDGMENTS -->
-Acknowledgments
-Aqui estão alguns recursos e ferramentas que ajudaram a tornar este projeto possível:
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-Streamlit
-FastAPI
-Whisper
-Pyannote
-Docker
-Choose an Open Source License
-GitHub Emoji Cheat Sheet
-Img Shields
-<p align="right">(<a href="#readme-top">back to top</a>)</p> <!-- MARKDOWN LINKS & IMAGES -->
-Notas
-Substitua your_username e repo_name pelos valores reais do seu repositório GitHub.
-Adicione uma imagem da interface Streamlit em images/screenshot.png para exibir um screenshot funcional.
-Atualize as informações de contato na seção "Contact" com seu nome, Twitter, email e perfil do LinkedIn, se aplicável.
-Certifique-se de que o arquivo LICENSE.txt esteja no repositório com a licença MIT.
+<!-- LICENSE -->
+## Licença
+
+Distribuído sob a licença MIT. Veja `LICENSE.txt` para mais informações.
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+<!-- CONTACT -->
+## Contato
+
+André Coêlho - [Intagram](https://www.instagram.com/coelhoandrelucas/) - andrecoedev@gmail.com
+
+Link do Projeto: [https://github.com/Dec0XD/audio-transcription-microservices](https://github.com/Dec0XD/audio-transcription-microservices)
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Agradecimentos
+
+- [Streamlit](https://streamlit.io)
+- [FastAPI](https://fastapi.tiangolo.com)
+- [Whisper](https://huggingface.co/openai)
+- [Pyannote](https://huggingface.co/pyannote)
+- [PyTorch](https://pytorch.org)
+- [NVIDIA CUDA](https://developer.nvidia.com/cuda-toolkit)
+
+<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/your_username/audio-transcription-microservices.svg?style=for-the-badge
+[contributors-url]: https://github.com/your_username/audio-transcription-microservices/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/your_username/audio-transcription-microservices.svg?style=for-the-badge
+[forks-url]: https://github.com/your_username/audio-transcription-microservices/network/members
+[stars-shield]: https://img.shields.io/github/stars/your_username/audio-transcription-microservices.svg?style=for-the-badge
+[stars-url]: https://github.com/your_username/audio-transcription-microservices/stargazers
+[issues-shield]: https://img.shields.io/github/issues/your_username/audio-transcription-microservices.svg?style=for-the-badge
+[issues-url]: https://github.com/your_username/audio-transcription-microservices/issues
+[license-shield]: https://img.shields.io/github/license/your_username/audio-transcription-microservices.svg?style=for-the-badge
+[license-url]: https://github.com/your_username/audio-transcription-microservices/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/andré-coêlho-b55b0622a/
+
+---
