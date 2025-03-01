@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Dec0XD/audio-transcription-microservices">
-    <img src="imgs/Inicial.png" alt="Logo" width="100" height="100">
+    <img src="imgs/Inicial.png" alt="Logo" width="1000" height="500">
   </a>
   <h3 align="center">Transcrição de Áudio/Vídeo com Segmentação de Falantes</h3>
   <p align="center">
